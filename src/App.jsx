@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import MainLayout from './components/Layouts/MainLayout'
 import Home from './pages/Home'
 import FetchOld from './pages/FetchOld'
@@ -29,9 +29,7 @@ const router = createBrowserRouter([
   }
 ])
 const App = () => {
-  return (
-    <div>React Query</div>
-  )
-}
+  return <RouterProvider router={router} ></RouterProvider>
+};
 
 export default App
